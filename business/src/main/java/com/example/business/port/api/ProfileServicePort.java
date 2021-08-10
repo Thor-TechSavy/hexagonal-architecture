@@ -8,8 +8,8 @@ import java.util.List;
 public interface ProfileServicePort {
 
 
-    public List<ProfileDto> getAll();
+    List<ProfileDto> getAll();
 
-    public ProfileDto create(NewProfileDto newProfileDto);
+    ProfileDto create(NewProfileDto newProfileDto);
 
 }

@@ -1,10 +1,8 @@
 package adapters;
 
-import com.example.business.port.spi.ProfileRepositoryPort;
 import com.example.business.objects.ProfileDto;
+import com.example.business.port.spi.ProfileRepositoryPort;
 import entity.ProfileEntity;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import mappers.ProfileMapper;
 import org.springframework.stereotype.Component;
