@@ -5,14 +5,14 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class Profile {
+public class ProfileDto {
 
     private Long id;
     private String name;
 
-    public static Profile of(NewProfile newProfile) {
-        var result = new Profile();
-        result.setName(newProfile.getName());
+    public static ProfileDto of(NewProfileDto newProfileDto) {
+        var result = new ProfileDto();
+        result.setName(newProfileDto.getName());
 
         return result;
     }

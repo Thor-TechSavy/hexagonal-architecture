@@ -1,6 +1,6 @@
-package com.example.app.data.entity;
+package entity;
 
-import com.example.business.objects.NewProfile;
+import com.example.business.objects.NewProfileDto;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -17,9 +17,9 @@ public class ProfileEntity {
 
     private String name;
 
-    public static ProfileEntity of(NewProfile newProfile) {
+    public static ProfileEntity of(NewProfileDto newProfileDto) {
         var result = new ProfileEntity();
-        result.setName(newProfile.getName());
+        result.setName(newProfileDto.getName());
 
         return result;
     }

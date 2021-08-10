@@ -1,7 +1,7 @@
 package com.example.appapi;
 
-import com.example.business.objects.NewProfile;
-import com.example.business.objects.Profile;
+import com.example.business.objects.NewProfileDto;
+import com.example.business.objects.ProfileDto;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -11,9 +11,9 @@ import java.util.List;
 public interface ProfileContract {
 
     @GetMapping
-    List<Profile> findAll();
+    List<ProfileDto> findAll();
 
     @PostMapping
-    Profile create(@RequestBody NewProfile p);
+    ProfileDto create(@RequestBody NewProfileDto p);
 
 }

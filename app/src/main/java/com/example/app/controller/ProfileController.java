@@ -1,25 +1,27 @@
 package com.example.app.controller;
 
+
 import com.example.appapi.ProfileContract;
-import com.example.business.ProfileService;
-import com.example.business.objects.NewProfile;
-import com.example.business.objects.Profile;
+import com.example.business.objects.NewProfileDto;
+import com.example.business.objects.ProfileDto;
+import com.example.business.port.api.ProfileServicePort;
+
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 
 @RequiredArgsConstructor
 public class ProfileController implements ProfileContract {
 
-    private final ProfileService service;
+    private final ProfileServicePort profileService;
 
-    public List<Profile> findAll() {
-        return service.getAll();
+    public List<ProfileDto> findAll() {
+        return profileService.getAll();
     }
 
-    public Profile create(@RequestBody NewProfile p) {
-        return service.create(p);
+    public ProfileDto create(@RequestBody NewProfileDto p) {
+        return profileService.create(p);
     }
 
 }

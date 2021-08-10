@@ -5,7 +5,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class NewProfile {
+public class NewProfileDto {
 
     private String name;
 
